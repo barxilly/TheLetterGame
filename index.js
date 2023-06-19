@@ -82,8 +82,17 @@ document.onkeyup = function(event){
     }
 }
 
-// If on mobile, use touchstart
-document.addEventListener("touchstart", function(event){
+// If on mobile make an invisible input field and pop up the keyboard
+// Then check the input field for changes
+if (window.innerWidth < 600) {
+    var input = document.createElement("input");
+    input.setAttribute("id", "input");
+    input.setAttribute("type", "text");
+    input.setAttribute("autofocus", "true");
+    input.setAttribute("style", "opacity: 0; position: absolute; top: 0; left: 0; width: 0; height: 0; z-index: -1;");
+    game.appendChild(input);
+    input.focus();
+    input.oninput = function(){
         // Remove the blinking cursor
         var cursor = document.getElementById("cursor");
         if (cursor) {
@@ -114,6 +123,10 @@ document.addEventListener("touchstart", function(event){
         cursor.setAttribute("id", "cursor");
         cursor.innerHTML = "|";
         gameText.appendChild(cursor);
-});
+        input.value = "";
+    }
+}
+
+
 
 // This is a game in which the user types a letter and no matter what they type the\\\\\\
