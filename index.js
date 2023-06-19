@@ -29,7 +29,7 @@ gameText.innerHTML = stringArray[stringIndex];
 game.appendChild(gameText);
 var no = 0
 
-
+// If on pc, use keypress
 document.onkeyup = function(event){
     // If it is a backspace, remove the last character
     if (event.keyCode != 8) {
@@ -81,5 +81,39 @@ document.onkeyup = function(event){
         gameText.appendChild(cursor);
     }
 }
+
+// If on mobile, use touchstart
+document.addEventListener("touchstart", function(event){
+        // Remove the blinking cursor
+        var cursor = document.getElementById("cursor");
+        if (cursor) {
+            cursor.parentNode.removeChild(cursor);
+        }
+        var key = event.key;
+        var gameText = document.getElementById("gameText");
+        if (stringIndex < stringIndexMax) {
+            stringIndex++;
+            if (stringArray[stringIndex] == "`") {
+                gameText.innerHTML += "<br>";
+            } else {
+                gameText.innerHTML += stringArray[stringIndex];
+            }
+        } else {
+            no++
+            if (no == 3) {
+                gameText.innerHTML = ""
+                string = generateText();
+                stringArray = string.split("");
+                stringLength = stringArray.length;
+                stringIndex = 0;
+                stringIndexMax = stringLength - 1;
+            }
+        }
+        // Display a blinking cursor at the end of the text
+        var cursor = document.createElement("span");
+        cursor.setAttribute("id", "cursor");
+        cursor.innerHTML = "|";
+        gameText.appendChild(cursor);
+});
 
 // This is a game in which the user types a letter and no matter what they type the\\\\\\
