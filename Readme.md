@@ -2,4 +2,4 @@
 A crappy little game I made while bored
 
 ## Usage
-Button mash. That's about it.
+Go to [barxilly.github.io/TheLetterGame](https://barxilly.github.io/TheLetterGame/) and button mash. That's about it.
