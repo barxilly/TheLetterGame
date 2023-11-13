@@ -4,9 +4,9 @@ var game = document.getElementById("game");
 // final text will always be a string decided by the computer.
 
 function generateText(){
-    var block1Choices = ["Dear ", "To ", "Hello ", "Greetings ", "Good day "]
+    var block1Choices = ["Dear ", "To ", "Hello ", "Greetings ", "Good day ", "My love "]
     var block2Choices = ["Mr. President,", "Sir,", "Madam,", "Jeff Bezos,", "Elon Musk,", "Mark Zuckerberg,", "Angela Merkel,", "Justin Trudeau,", "Emmanuel Macron,", "Your Majesty,", "Your Highness,", "Your Excellency,", "Steve Jobs,", "Bill Gates,", "Tim Cook,", "Satya Nadella,", "Sundar Pichai,", "Larry Page,", "Sergey Brin,", "John,", "Jane,", "David,", "Sarah,", "Michael,", "Emily,", "William,", "Olivia,", "James,", "Sophia,"];
-    var block3Choices = ["I am writing to you today to inform you that ", "This letter should be taken with utmost seriousness as ", "I am sorry to inform you that ", "Don't tell my friends but "]
+    var block3Choices = ["I am writing to you today to inform you that ", "This letter should be taken with utmost seriousness as ", "I am sorry to inform you that ", "Don't tell my friends but ", "Right... "]
     var block4Choices = ["you appear to have double parked your car in front of my house.", "I have accidentally run over your son.", "your house appears to have burned down.", "your dog has gotten it's leg caught in my oven again.", "I couldn't find a cake for your wedding", "I accidentally spilled coffee on your laptop.", "I lost your passport.", "I scratched your car while parking.", "Your son broke your favorite vase.", "I forgot to water your plants while you were away."];
     var block5Choices = ["I am sorry for the inconvenience.", "I am sorry for your loss.", "I am sorry for the damage.", "I am sorry for the trouble.", "I am sorry for the pain."]
     var block6Choices = ["Despite the current situation, it is important to move forward. Therefore, I recommend that you", "Given the circumstances, it would be wise to", "In light of the situation, I suggest that you", "To address the issue at hand, I advise that you", "If you want to resolve this matter, I would recommend that you"]
