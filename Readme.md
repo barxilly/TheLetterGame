@@ -1,3 +1,5 @@
-## The Letter Game
+# The Letter Game
+A crappy little game I made while bored
 
-Fun
+## Usage
+Button mash. That's about it.
